@@ -2,12 +2,9 @@ package main
 
 import (
 	"fmt"
+	"github.com/james-francis-MT/cv/internal/handlers"
 	"net/http"
 )
-
-func indexHandler(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello there")
-}
 
 func aboutHandler(w http.ResponseWriter, req *http.Request) {
 	fmt.Fprintf(w, "hello there")
@@ -22,7 +19,7 @@ func contactHandler(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("/", indexHandler)
+	http.HandleFunc("/", handlers.IndexHandler)
 	http.HandleFunc("/about", aboutHandler)
 	http.HandleFunc("/project", projectHandler)
 	http.HandleFunc("/contact", contactHandler)
