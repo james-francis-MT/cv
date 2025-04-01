@@ -6,6 +6,11 @@ import (
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	c := templates.Index("a@b.com")
-	c.Render(r.Context(), w)
+	c := templates.Layout()
+	err := c.Render(r.Context(), w)
+
+	if err != nil {
+		http.Error(w, "Error rendering template", http.StatusInternalServerError)
+		return
+	}
 }

@@ -19,6 +19,9 @@ func contactHandler(w http.ResponseWriter, req *http.Request) {
 }
 
 func main() {
+	fileServer := http.FileServer(http.Dir("./static"))
+	http.Handle("/static/*", fileServer)
+
 	http.HandleFunc("/", handlers.IndexHandler)
 	http.HandleFunc("/about", aboutHandler)
 	http.HandleFunc("/project", projectHandler)

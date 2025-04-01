@@ -1,0 +1,46 @@
+package templates
+
+templ header() {
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<script src="https://unpkg.com/htmx.org@1.9.11"></script>
+		<link rel="stylesheet" href="/static/css/output.css"/>
+	</head>
+}
+
+templ nav() {
+	<nav class="bg-primary-600 p-4">
+		<div class="container flex justify-between">
+			<ol class="flex space-x-4">
+				<li>
+					<a class="text-gray-200" href="/">Home</a>
+				</li>
+				<li>
+					<a class="text-gray-200" href="/about">About</a>
+				</li>
+			</ol>
+			<ol class="flex space-x-4">
+				<li>
+					<a class="text-gray-200" href="/register">Register</a>
+				</li>
+				<li>
+					<a class="text-gray-200" href="/login">Login</a>
+				</li>
+			</ol>
+		</div>
+	</nav>
+	<div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+		<div>
+			<div class="text-xl font-medium text-black dark:text-white">ChitChat</div>
+			<p class="text-gray-500 dark:text-gray-400">You have a new message!</p>
+		</div>
+	</div>
+}
+
+templ Layout() {
+	@header()
+	<body class="flex flex-col h-full">
+		@nav()
+	</body>
+}
