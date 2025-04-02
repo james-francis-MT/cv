@@ -5,9 +5,9 @@ import (
 	"net/http"
 )
 
-func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	c := templates.Index("a@b.com")
-	err := templates.Layout(c, "home").Render(r.Context(), w)
+func ProjectsHandler(w http.ResponseWriter, r *http.Request) {
+	c := templates.Projects("a@b.com")
+	err := templates.Layout(c, "projects").Render(r.Context(), w)
 
 	if err != nil {
 		http.Error(w, "Error rendering template", http.StatusInternalServerError)

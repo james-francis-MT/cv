@@ -6,26 +6,16 @@ import (
 	"net/http"
 )
 
-func aboutHandler(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello there")
-}
-
-func projectHandler(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello there")
-}
-
-func contactHandler(w http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(w, "hello there")
-}
-
 func main() {
+	// fileServer := http.FileServer(http.Dir("./static"))
+	// http.Handle("/static", fileServer)
 	fileServer := http.FileServer(http.Dir("./static"))
-	http.Handle("/static/*", fileServer)
+	http.Handle("/static/", http.StripPrefix("/static/", fileServer))
 
-	http.HandleFunc("/", handlers.IndexHandler)
-	http.HandleFunc("/about", aboutHandler)
-	http.HandleFunc("/project", projectHandler)
-	http.HandleFunc("/contact", contactHandler)
+	http.HandleFunc("/{$}", handlers.IndexHandler)
+	http.HandleFunc("/about", handlers.AboutHandler)
+	http.HandleFunc("/projects", handlers.ProjectsHandler)
+	http.HandleFunc("/contact", handlers.ContactHandler)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Println("Server error:", err)
