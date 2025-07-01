@@ -7,8 +7,6 @@ import (
 )
 
 func main() {
-	// fileServer := http.FileServer(http.Dir("./static"))
-	// http.Handle("/static", fileServer)
 	fileServer := http.FileServer(http.Dir("./static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fileServer))
 
