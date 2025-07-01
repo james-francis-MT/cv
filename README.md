@@ -1,14 +1,14 @@
 # CV Website (Go + HTMX)
 
-🚀 A personal CV website built using **Go, HTMX, and Docker**. This project serves as an online portfolio to showcase projects, experience, and contact details in a lightweight and interactive way.
+A personal CV website built using **Go, HTMX, and Docker**. This project serves as an online portfolio to showcase projects, experience, and contact details in a lightweight and interactive way.
 
 ## Features
-- ⚡ **Go Backend** – Fast and efficient web server
-- 🌐 **HTMX** – Smooth, JavaScript-free interactivity
-- 🎨 **TailwindCSS** – Modern styling
-- 🗄 **PostgreSQL** – Database for dynamic content
-- 🐳 **Dockerized** – Easy deployment and scaling
-- 🔐 **Admin Panel** – Secure project & contact management
+- **Go Backend** – Fast and efficient web server
+- **HTMX** – Smooth, JavaScript-free interactivity
+- **TailwindCSS** – Modern styling
+- **PostgreSQL** – Database for dynamic content
+- **Dockerized** – Easy deployment and scaling
+- **Admin Panel** – Secure project & contact management
 
 ## Tech Stack
 | Technology    | Purpose          |
