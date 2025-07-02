@@ -8,7 +8,7 @@ package templates
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
-func Index(email string) templ.Component {
+func Index() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -29,20 +29,7 @@ func Index(email string) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link rel=\"stylesheet\" href=\"/static/css/output.min.css\"></head><div>Welcome ")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		var templ_7745c5c3_Var2 string
-		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(email)
-		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/index.templ`, Line: 10, Col: 17}
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</div><body><h1 class=\"text-3xl font-bold underline\">Hello world!</h1></body>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<body><div class=\"grid grid-cols-6 gap-4 mt-6 font-mono\"><div class=\"col-span-3 col-start-2\"><h1 class=\"text-3xl font-bold underline\">James Francis</h1><br><p>Senior Software Engineer and Climbing Enthusiast</p><br><p>Dedicated and passionate Software Engineer with extensive experience in  front-end and back-end development within the public sector. With a strong  foundation in mathematics and a deep interest in computer science,  I excel at tackling complex, real-world challenges.</p><br><h3 class=\"text-xl font-bold mb-4\">Core skills</h3><ul class=\"list-disc list-inside\" style=\"list-style: disc inside;\"><li>Test driven development</li><li>TypeScript / JavaScript</li><li>Ruby</li><li>Python</li><li>CI/CD</li><li>Serverless Computing in AWS</li><li>Deploying containerised services</li><li>Data engineering</li><li>Git</li><li>Pairing and mentoring</li><li>IAC, Terraform</li><li>SQL and noSQL databases</li></ul></div></div></body>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

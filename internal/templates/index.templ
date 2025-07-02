@@ -1,17 +1,42 @@
 package templates
 
-templ Index(email string) {
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="/static/css/output.min.css"/>
-	</head>
-	<div>
-		Welcome { email }
-	</div>
+templ Index() {
 	<body>
-		<h1 class="text-3xl font-bold underline">
-			Hello world!
-		</h1>
+		<div class="grid grid-cols-6 gap-4 mt-6 font-mono">
+			<div class="col-span-3 col-start-2">
+				<h1 class="text-3xl font-bold underline">
+					James Francis
+				</h1>
+				<br/>
+				<p>
+					Senior Software Engineer and Climbing Enthusiast
+				</p>
+				<br/>
+				<p>
+					Dedicated and passionate Software Engineer with extensive experience in 
+					front-end and back-end development within the public sector. With a strong 
+					foundation in mathematics and a deep interest in computer science, 
+					I excel at tackling complex, real-world challenges.
+				</p>
+				<br/>
+				<h3 class="text-xl font-bold mb-4">
+					Core skills
+				</h3>
+				<ul class="list-disc list-inside" style="list-style: disc inside;">
+					<li>Test driven development</li>
+					<li>TypeScript / JavaScript</li>
+					<li>Ruby</li>
+					<li>Python</li>
+					<li>CI/CD</li>
+					<li>Serverless Computing in AWS</li>
+					<li>Deploying containerised services</li>
+					<li>Data engineering</li>
+					<li>Git</li>
+					<li>Pairing and mentoring</li>
+					<li>IAC, Terraform</li>
+					<li>SQL and noSQL databases</li>
+				</ul>
+			</div>
+		</div>
 	</body>
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
-	c := templates.Index("a@b.com")
+	c := templates.Index()
 	err := templates.Layout(c, "home").Render(r.Context(), w)
 
 	if err != nil {
