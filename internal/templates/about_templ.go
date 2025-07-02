@@ -29,7 +29,7 @@ func About() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<body><div class=\"grid grid-cols-6 gap-4 mt-6 font-mono\"><div class=\"col-span-3 col-start-2\"><h3 class=\"text-3xl font-bold mb-4\">Core skills</h3><ul class=\"list-disc list-inside\" style=\"list-style: disc inside;\"><li>Test driven development</li><li>TypeScript / JavaScript</li><li>Ruby</li><li>Python</li><li>CI/CD</li><li>Serverless Computing in AWS</li><li>Deploying containerised services</li><li>Data engineering</li><li>Git</li><li>Pairing and mentoring</li><li>IAC, Terraform</li><li>SQL and noSQL databases</li></ul></div></div></body>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<body><div class=\"grid grid-cols-6 gap-4 mt-6 font-mono\"><div class=\"col-span-3 col-start-2\"><h3 class=\"text-3xl font-bold mb-4\">Core skills</h3><ul class=\"list-disc list-inside\"><li>Test driven development</li><li>TypeScript / JavaScript</li><li>Ruby</li><li>Python</li><li>CI/CD</li><li>Serverless Computing in AWS</li><li>Deploying containerised services</li><li>Data engineering</li><li>Git</li><li>Pairing and mentoring</li><li>IAC, Terraform</li><li>SQL and noSQL databases</li></ul></div></div></body>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
