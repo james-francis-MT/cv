@@ -6,7 +6,7 @@ import (
 )
 
 func ProjectsHandler(w http.ResponseWriter, r *http.Request) {
-	c := templates.Projects("a@b.com")
+	c := templates.Projects()
 	err := templates.Layout(c, "projects").Render(r.Context(), w)
 
 	if err != nil {

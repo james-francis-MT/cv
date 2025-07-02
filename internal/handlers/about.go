@@ -6,7 +6,7 @@ import (
 )
 
 func AboutHandler(w http.ResponseWriter, r *http.Request) {
-	c := templates.About("a@b.com")
+	c := templates.About()
 	err := templates.Layout(c, "about").Render(r.Context(), w)
 
 	if err != nil {

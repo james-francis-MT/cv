@@ -6,7 +6,7 @@ import (
 )
 
 func ContactHandler(w http.ResponseWriter, r *http.Request) {
-	c := templates.Contact("a@b.com")
+	c := templates.Contact()
 	err := templates.Layout(c, "contact").Render(r.Context(), w)
 
 	if err != nil {
